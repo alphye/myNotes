@@ -1,0 +1,5 @@
+git忽略某文件中的某些行
+1、在.git/info/ 文件夹下创建attributes文件，添加内容：*.*(文件名) filter=_gitignore(过滤器名)
+2、配置过滤器
+	git config --local filter._gitignore.smudge cat
+    git config --local filter._gitignore.clean 'sed "/.*last_visited_desktop.*/d"'  （忽略包含last_visited_desktop的行）

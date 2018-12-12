@@ -1,0 +1,20 @@
+配置多个远程仓库
+1、生成一个第二对公钥秘钥对
+	ssh-keygen -t rsa -C 'XXX@XXX.com' -f id_rsa_XXX
+	会在user/.ssh/目录下生成文件id_rsa_XXX.pub和id_rsa_XXX
+2、在user/.ssh/目录下创建config文件，配置每个仓库的信息 
+	#qinfei503 ## 假如要连接到远程URL：git@github.com:qinfei503/project.git
+	Host qinfei503 #host名，自定义，但是后面添加remote的时候，就不能再用URL git@github.com:qinfei503/project.git了，要用qinfei503（也就是host的值）:qinfei503/project.git
+	  HostName github.com   ##就是远程URL中，“@”后面的内容
+	  User git  ##就是远程URL中，“@”前面的内容
+	  IdentityFile ~/.ssh/id_rsa
+	 
+	#alphye ##假如要连接到远程URL：git@github.com:alphye/project.git
+	Host alphye
+	  HostName github.com  ##就是远程URL中，“@”后面的内容
+	  User git ##就是远程URL中，“@”前面的内容
+	  IdentityFile ~/.ssh/id_rsa_alphye ## 指定的秘钥
+3、添加远程仓库：
+	git remote add origin host:XXXX/XXXX.git
+	如果是项目已有remote，则修改URL为host:XXXX/XXXX.git
+	

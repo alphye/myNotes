@@ -1,0 +1,6 @@
+WebSocketConfig的configureMessageBroker()方法里配置：registry.setUserDestinationPrefix("/user2/")
+SimpMessagingTemplate.convertAndSend(address,content);
+向指定的address(如：/queue/contactMessage)发送content内容
+
+SimpMessagingTemplate.convertAndSendToUser(userid,address,content);
+会对address（如：/queue/contactMessage）做一个处理，拼上/user2/${userid}再发送：向指定的/user2/${userid}/queue/contactMessage 发送content内容
