@@ -1,0 +1,24 @@
+比例尺通常用于变换(或者说映射）抽象的数据值到可视量化变量（比如位置，长度，颜色等）
+比如，假设我们有以下数组数据：
+[ 0, 2, 3, 5, 7.5, 9, 10 ]
+我们可以这样创建一个比例尺函数：
+
+var myScale = d3.scaleLinear()
+  .domain([0, 10])
+  .range([0, 600]);
+d3将创建一个myScale函数用于接收[0,10]之间的数据输入(domain)映射为[0,600]像素的位置数据(range)
+
+
+我们可以使用myScale函数来计算对应数据的positions数据:
+   var myScale = d3.scaleLinear()
+  .domain([0, 10])
+  .range([0, 600]);
+
+myScale(0);   // returns 0
+
+
+ .invert() 方法接受一个range输出来反算对应的input domain
+  var linearScale = d3.scaleLinear()
+  .domain([0, 10])
+  .range([0, 100]);
+linearScale.invert(50);   

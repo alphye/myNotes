@@ -1,0 +1,3 @@
+192.243.115.185
+搬瓦工 root账号密码： L81NKuvI7Rcg
+搬瓦工shadowsocks配置：https://kiwivm.64clouds.com/main-exec.php?mode=extras_shadowsocks
