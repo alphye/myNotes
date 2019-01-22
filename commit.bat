@@ -19,4 +19,3 @@ goto end
 echo commit successful --finished
 goto end
 :end
-echo %time% >> ../xjhs.txt
