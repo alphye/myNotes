@@ -1,0 +1,2 @@
+执行 jar 中的主类
+	java -Djava.ext.dirs=lib -classpath lsdc-railway-1.0-SNAPSHOT.jar com.lishengzn.railway.pannel.MainFrame
